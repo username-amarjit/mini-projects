@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold mb-6 text-center text-black">Quiz App</h1>
+        <form class="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-black text-sm font-bold mb-2" for="numQuestions">
+                    Number of Questions:
+                </label>
+                <input
+                    class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline focus:border-gray-500"
+                    id="numQuestions" type="number" min="1" max="50" value="10" oninput="this.value = Math.min(Math.max(this.value, 1), 50)">
+            </div>
+            <div class="mb-4">
+                <label class="block text-black text-sm font-bold mb-2" for="category">
+                    Category:
+                </label>
+                <select
+                    class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline focus:border-gray-500"
+                    id="category">
+                        <option value="any">Any Category</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="13">Entertainment: Musicals &amp; Theatres</option>
+                        <option value="14">Entertainment: Television</option>
+                        <option value="15">Entertainment: Video Games</option>
+                        <option value="16">Entertainment: Board Games</option>
+                        <option value="17">Science &amp; Nature</option>
+                        <option value="18">Science: Computers</option>
+                        <option value="19">Science: Mathematics</option>
+                        <option value="20">Mythology</option>
+                        <option value="21">Sports</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="24">Politics</option>
+                        <option value="25">Art</option>
+                        <option value="26">Celebrities</option>
+                        <option value="27">Animals</option>
+                        <option value="28">Vehicles</option>
+                        <option value="29">Entertainment: Comics</option>
+                        <option value="30">Science: Gadgets</option>
+                        <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+                        <option value="32">Entertainment: Cartoon &amp; Animations</option>
+                </select>
+            </div>
+            <div class="mb-6">
+                <label class="block text-black text-sm font-bold mb-2" for="difficulty">
+                    Difficulty:
+                </label>
+                <select
+                    class="shadow appearance-none border border-gray-300 rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline focus:border-gray-500"
+                    id="difficulty">
+                        <option value="any">Any Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+            </div>
+            <div class="flex items-center justify-center">
+                <button id="startquiz-button"
+                    class="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button">
+                    Start Quiz
+                </button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.querySelector('#startquiz-button').addEventListener('click',startQuiz)
+        function startQuiz() {
+            const numQuestions = document.getElementById('numQuestions').value;
+            const category = document.getElementById('category').value;
+            const difficulty = document.getElementById('difficulty').value;
+
+            
+            sendApiReq()
+            // Here you would typically make an API request with these parameters
+            console.log(`Starting quiz with ${numQuestions} questions, category: ${category}, difficulty: ${difficulty}`);
+        }
+
+        function sendApiReq(){
+            axios.get('https://opentdb.com/api.php?amount=1')
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+        }
+    </script>
+</body>
+
+</html>

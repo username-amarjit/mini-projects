@@ -1,11 +1,11 @@
 Creating projects in C is a great way to learn and deepen your understanding of programming. Here's a roadmap of project ideas, from beginner to advanced, that will help you improve your skills in C. Each project builds on the skills from the previous one, so the progression is natural.
 
 ### Beginner Projects
-1. **Hello World Program**
+1. **Hello World Program** done
    - Purpose: Understand basic syntax and compiling.
    - Skills learned: Basic C syntax, using an IDE or compiler.
 
-2. **Simple Calculator**
+2. **Simple Calculator** done
    - Purpose: Perform basic arithmetic operations (addition, subtraction, multiplication, division).
    - Skills learned: Working with functions, user input, conditionals.
 

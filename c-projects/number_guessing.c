@@ -22,7 +22,7 @@ int main(){
             printf("\nYou have Guessed : Wrong.");
         }
 
-        printf("\nPress 1 to try again");
+        printf("\nPress 1 to try again :");
         scanf("%d",&again);
     }while(again==1);
     

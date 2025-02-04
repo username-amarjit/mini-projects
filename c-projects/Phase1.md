@@ -9,15 +9,15 @@ Creating projects in C is a great way to learn and deepen your understanding of 
    - Purpose: Perform basic arithmetic operations (addition, subtraction, multiplication, division).
    - Skills learned: Working with functions, user input, conditionals.
 
-3. **Temperature Converter**
+3. **Temperature Converter** done
    - Purpose: Convert temperatures between Celsius, Fahrenheit, and Kelvin.
    - Skills learned: Functions, handling user input, basic math operations.
 
-4. **Number Guessing Game**
+4. **Number Guessing Game** done
    - Purpose: Computer randomly selects a number, and the user has to guess it.
    - Skills learned: Random number generation, loops, conditionals.
 
-5. **Palindrome Checker**
+5. **Palindrome Checker** done
    - Purpose: Check if a word or number is the same forward and backward.
    - Skills learned: String manipulation, loops, conditionals.
 
